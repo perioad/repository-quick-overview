@@ -1,0 +1,17 @@
+<div class="repo-form">
+  <h1 class="repo-form__title">What is you looking for?</h1>
+  <form [formGroup]="reposSearchForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+          <mat-label>Type repo's name</mat-label>
+          <input matInput type="text" formControlName="repoSearchName">
+      </mat-form-field>
+  </form>
+
+  <div class="sorting">
+    <button class="sorting__button" (click)="onSortByWatchers()">Sort by watchers</button>
+    <button class="sorting__button" (click)="onSortByName()">Sort by name</button>
+  </div>
+
+  <app-repositories [repositories]="fetchedRepos"></app-repositories>
+
+</div> 

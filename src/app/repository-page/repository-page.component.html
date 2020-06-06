@@ -1,0 +1,37 @@
+<div class="repository" *ngIf="!isStoreEmpty; else storeEmpty">
+  <p class="repository__name">
+    Repository name:&#32;
+    <a class="repository__link" [href]="repository.html_url" target="_blank">{{ repository.name }}</a>
+  </p>
+  <p class="repository__archived">
+    Is archived: {{ repository.archived ? 'yes' : 'no' }}
+  </p>
+  <p class="repository__created-date">
+    Created: {{ createdDate }}
+  </p>
+  <p class="repository__description">
+    Description: {{ repository.description || 'No description' }}
+  </p>
+  <p class="repository__language">
+    Language: {{ repository.language }}
+  </p>
+  <p class="repository__watchers">
+    Number of watchers: {{ repository.watchers }}
+  </p>
+  <p class="repository__forks">
+    Number of forks: {{ repository.forks }}
+  </p>
+  <p class="repository__issues">
+    Number of issues: {{ repository.open_issues }}
+  </p>
+  <p class="repository__owner">
+    Owner: {{ repository.owner.login}}
+  </p>
+  <img [src]="repository.owner.avatar_url" alt="Repository owner image" class="repository__owner-image">
+</div>
+
+<ng-template #storeEmpty>
+  <div class="store-empty">
+    <p>Repositories search isn't in the NgRx store anymore. Search again please :)</p>
+  </div>
+</ng-template>

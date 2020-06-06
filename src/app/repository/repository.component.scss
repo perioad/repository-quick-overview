@@ -1,0 +1,50 @@
+:host {
+  display: block;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid lightgrey;
+  }
+}
+
+.repository {
+  height: 10rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  transition: all .4s ease-out;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: scale(1.03);
+    box-shadow: 0 0 1rem 0 rgba(black, .15);
+    background-color: white; 
+  }
+
+  &__owner-image {
+    height: 100%;
+    border-radius: .3rem;
+
+    @media screen and (max-width: 600px) {
+      width: 30vw;
+      height: auto;
+    }
+  }
+
+  &__info {
+    width: 90%;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    height: auto;
+    min-height: 70vw;
+    flex-direction: column;
+    align-items: center;
+  }
+}

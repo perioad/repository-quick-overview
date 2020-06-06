@@ -1,0 +1,14 @@
+<div class="repository">
+  <img class="repository__owner-image" [src]="repository.owner.avatar_url">
+  <div class="repository__info">
+    <h2 class="repository__name">
+      {{ repository.name }}
+    </h2>
+    <p class="repository__watchers">
+      Watchers: {{ repository.watchers }}
+    </p>
+    <p class="repository__description">
+      {{ repository.description || 'No description' }} 
+    </p>
+  </div>
+</div>

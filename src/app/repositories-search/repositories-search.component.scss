@@ -1,0 +1,36 @@
+.repo-form {
+  width: 90vw;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+
+  &__button {
+    border: none;
+    border-radius: .3rem .3rem 0 0;
+    box-shadow: inset 0 -1px 0 0 grey;
+    background-color: rgb(240, 240, 240);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: gray;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 -2px 0 0 black;
+    }
+
+    &:active {
+      box-shadow: inset 0 -2px 0 0 purple;
+    }
+  }
+}
